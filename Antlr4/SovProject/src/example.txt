@@ -1,0 +1,48 @@
+sov main {
+
+	numeric y=0,d=1;
+	numeric x=0;
+	numeric z=0;
+	numeric a,b,c;
+	logic boleano=invalid;
+	reader(y);
+	
+  asLongAs(y>=0){
+    y=y-1;
+    x=x+1;
+  }
+  inCaseOf(y==0){
+    boleano=valid;
+  }
+  inCaseOf(boleano==valid){
+    inCaseOf(x>5){
+      z=sin(x);
+    }
+    inCaseOfAnother(x==0){
+      z=cos(x);
+    }
+    otherWise{ 
+      z=x*2;
+      x=elevated(3);
+      z=z/x;
+      z=squareRoot(z);
+    }
+    show(z);
+  }
+  otherWise{
+    show("quien");
+  }
+  
+  //for
+  
+  fromTo(numeric i=0;i<10;i++){
+  	show(i);  
+  }
+  
+ 
+  
+  /*fin
+  	del 
+  	programa*/
+  
+}
