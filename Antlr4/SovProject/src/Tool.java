@@ -18,10 +18,12 @@ public class Tool {
 		try
     	{
 			System.out.println("Scanning file...");
-			sovLexer lexer = new sovLexer(new ANTLRInputStream(new FileInputStream("./src/example.txt")));
+			//usar example para codigo sov | wrongexample para codigo errado
+			sovLexer lexer = new sovLexer(new ANTLRInputStream(new FileInputStream("./src/wrongexample.txt")));
 	        CommonTokenStream tokens = new CommonTokenStream(lexer);
 	    	sovParser parser = new sovParser(tokens);
 	    	parser.sov();
+	    	System.out.println("Finished.");
     	}
     	catch (Exception ex)
     	{

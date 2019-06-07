@@ -83,10 +83,7 @@ funcionesmat: (ABS_FUN | SIN_FUN | COS_FUN | SQRT_FUN | POW_FUN) PAR_OPEN (ID | 
 condicion: (ID | NUMBER_NAT | TRUE_LITERAL | FALSE_LITERAL) (EQ | GT | LT | GEQ | LEQ | NEQ) (ID | NUMBER_NAT | TRUE_LITERAL | FALSE_LITERAL); // CONDICION
 operaciones: (ID | NUMBER_NAT) ASSIGN ID ( PLUS | MINUS | MULT | DIV) (NUMBER_NAT | ID) SEMICOLON; // OPERACIONES MATEMATICAS
 
-numeric_declaration
-options {
-  
-}: NUMERIC_TYPE ID ((ASSIGN (NUMBER_NAT | funcionesmat ) (COMA ID ASSIGN (NUMBER_NAT|funcionesmat))*)| (COMA ID)*) SEMICOLON;
+numeric_declaration: NUMERIC_TYPE ID ((ASSIGN (NUMBER_NAT | funcionesmat ) (COMA ID ASSIGN (NUMBER_NAT|funcionesmat))*)| (COMA ID)*) SEMICOLON;
 
 numeric_assign: ID ASSIGN (NUMBER_NAT | funcionesmat) SEMICOLON;
 

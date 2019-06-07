@@ -1,0 +1,10 @@
+int main(){
+	
+	
+	numeric i=0;
+	
+	show(i);
+	
+	return 0;
+	
+}
